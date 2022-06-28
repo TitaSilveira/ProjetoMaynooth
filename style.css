@@ -7,7 +7,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    min-height: 100vh;
     color:#000;
 }
 
@@ -38,33 +37,44 @@ nav ul li:hover{
 
 ul li a {
     text-decoration: none;
-    text-decoration-color:none;
+    color: #000;
+    letter-spacing: 0.3rem;
 }
 
 .botao {
-    border: none;
-    background-color: #F0C66F;
-    border-radius: 5%;
-    padding: 1em 2em;
-
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
+    color: #fff;
     text-transform: uppercase;
+    letter-spacing: 0.3rem;
+
+    background: #F0C66F;
+    background: -webkit-linear-gradient(to right, #E87461, #F0C66F);
+    background: linear-gradient(to left, #E87461, #F0C66F);
+    
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5%;
     cursor: pointer;
 }
 
 .botao:hover{
-    background-color: #AF7EA3;
-    color: #fff;
+    background-color: #F0C66F;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 #hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url('Assets/image1.jpg');
     background-repeat: no-repeat;
+    background-clip: border-box;
     background-position: right;
-    background-size: cover;
-    background-origin: padding-box;
+    background-size: 100%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    -webkit-animation: zoom 10s linear;
+    animation: zoomin 5s linear;
+    animation-fill-mode: forwards;
+    background-origin: center;
+    
     width: 100vw;
     height: 750px;
 
@@ -74,6 +84,15 @@ ul li a {
     align-items: center;
 
     color: white;
+    animation: zoom 20s;
+}
+@keyframes zoom {
+    0%{
+        background-size: 150%        ;
+    }
+    100% {
+        background-size: 100%;
+    }
 }
 
 #hero h1 {
@@ -83,7 +102,7 @@ ul li a {
 #hero h3 {
     font-size: 16px;
     font-weight: 300;
-    letter-spacing: 1.28px;
+    letter-spacing: 0.3rem;
 }
 
 footer {
@@ -105,7 +124,7 @@ footer {
 }
 
 ul li:hover {
-    color:#F0C66F
+    color:#F0C66F;
 }
 
 .informacoesAdd {
@@ -132,3 +151,4 @@ footer figure {
 .icon svg {
     color:#AF7EA3
 }
+
